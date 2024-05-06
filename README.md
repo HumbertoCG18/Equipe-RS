@@ -12,7 +12,7 @@ For Developers:
 - ["React Dom"](https://www.npmjs.com/package/react-dom)
 - ["React Native"](https://www.npmjs.com/package/react-native)
 - ["GitHub Desktop"](https://desktop.github.com) (Opicional)
-
+- ["TailWind CSS"](https://tailwindcss.com/docs/guides/create-react-app)
 
 Passo a passo: 
 1. Clone este repositório (Na brench desejada)
