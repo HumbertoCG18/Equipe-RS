@@ -1,0 +1,81 @@
+{
+    "predictions" : 
+    [
+       {
+          "description" : "Rua Fernandes Vieira, 164 - Bom Fim, Porto Alegre - RS, Brasil",
+          "matched_substrings" : 
+          [
+             {
+                "length" : 16,
+                "offset" : 4
+             },
+             {
+                "length" : 3,
+                "offset" : 22
+             },
+             {
+                "length" : 12,
+                "offset" : 37
+             }
+          ],
+          "place_id" : "ChIJT9sRDLJ5GZURhjSAuwXtzJE",
+          "reference" : "ChIJT9sRDLJ5GZURhjSAuwXtzJE",
+          "structured_formatting" : 
+          {
+             "main_text" : "Rua Fernandes Vieira, 164",
+             "main_text_matched_substrings" : 
+             [
+                {
+                   "length" : 16,
+                   "offset" : 4
+                },
+                {
+                   "length" : 3,
+                   "offset" : 22
+                }
+             ],
+             "secondary_text" : "Bom Fim, Porto Alegre - RS, Brasil",
+             "secondary_text_matched_substrings" : 
+             [
+                {
+                   "length" : 12,
+                   "offset" : 9
+                }
+             ]
+          },
+          "terms" : 
+          [
+             {
+                "offset" : 0,
+                "value" : "Rua Fernandes Vieira"
+             },
+             {
+                "offset" : 22,
+                "value" : "164"
+             },
+             {
+                "offset" : 28,
+                "value" : "Bom Fim"
+             },
+             {
+                "offset" : 37,
+                "value" : "Porto Alegre"
+             },
+             {
+                "offset" : 52,
+                "value" : "RS"
+             },
+             {
+                "offset" : 56,
+                "value" : "Brasil"
+             }
+          ],
+          "types" : 
+          [
+             "premise",
+             "geocode"
+          ]
+       }
+    ],
+    "status" : "OK"
+ }
