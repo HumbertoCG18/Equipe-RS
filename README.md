@@ -8,9 +8,12 @@ For Developers:
 - ["Expo Dev Client"](https://www.npmjs.com/package/expo-dev-client)
 - ["NPM"](https://www.npmjs.com/package/npm)
 - ["NPX"](https://www.npmjs.com/package/npx)
+- ["Next"](https://www.npmjs.com/package/postcss)
+- ["PostCSS"](https://www.npmjs.com/package/postcss)
+- ["TailWindCSS"](https://tailwindcss.com/docs/guides/create-react-app)
+- ["Google-Map-React"](https://www.npmjs.com/package/google-map-react)
 - ["React"](https://www.npmjs.com/package/react)
 - ["React Dom"](https://www.npmjs.com/package/react-dom)
-- ["React Native"](https://www.npmjs.com/package/react-native)
 - ["GitHub Desktop"](https://desktop.github.com) (Opicional)
 
 
