@@ -24,7 +24,7 @@ git clone https://github.com/HumbertoCG18/Equipe-RS.git
 ```
 
 ```
-cd User/SuaPasta/EquipeRS
+cd User/SuaPasta/Equipe-RS-React/sos-rs/
 ```
 2. Vá até o diretório do repositório no PowerShell, e execute o comando:
 ```
