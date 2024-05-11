@@ -36,3 +36,4 @@ next-env.d.ts
 
 # config folder
 /src/app/config
+backend/env/.flaskenv
