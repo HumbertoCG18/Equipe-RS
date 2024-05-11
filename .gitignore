@@ -19,7 +19,8 @@
 *.pem
 
 #backend
-/backend/env
+backend/env
+backend/__pycache__
 
 # debug
 npm-debug.log*
