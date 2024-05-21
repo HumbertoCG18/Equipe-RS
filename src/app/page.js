@@ -1,5 +1,7 @@
 import GoogleMapReact from "src/components/GoogleMap.js";
 import axios from "axios";
+import { createRoot } from 'react-dom/client';
+import { FluentProvider, webLightTheme } from '@fluentui/react-components';
 import './globals.css';
 
 export default function Home() {
