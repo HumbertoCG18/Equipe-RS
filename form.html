@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="pt-BR">
+  <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    rel="stylesheet"
+  />
+  <head>
+    <title>Formulário de Resgate</title>
+    <!-- CSS -->
+    <style>
+      .container {
+        margin-top: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-control:focus,
+      .select2-selection:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+        background-color: #e9f5ff; /* Light blue background */
+      }
+      .select2-container--default .select2-selection--single {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        padding: 0.375rem 0.75rem;
+        height: calc(1.5em + 0.75rem + 2px);
+      }
+      .select2-container--default
+        .select2-selection--single
+        .select2-selection__rendered {
+        line-height: 1.5;
+      }
+      .select2-container--default
+        .select2-selection--single
+        .select2-selection__arrow {
+        height: calc(1.5em + 0.75rem + 2px);
+      }
+      .alert-custom {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: red;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .is-invalid {
+        border-color: #dc3545;
+        box-shadow: 0 0 5px rgba(220, 53, 69, 0.25);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="alert alert-danger alert-custom">
+        NÃO FUNCIONAL! PARA VALIDAÇÃO DE CAMPOS, LAYOUT E CAMPOS OBRIGATÓRIOS!
+      </div>
+
+      <h2 class="text-center mb-4">Formulário de Resgate</h2>
+      <form id="resgateForm" novalidate>
+        <!-- Sessão Localização -->
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="resgate_logr">Logradouro:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="resgate_logr"
+              name="resgate_logr"
+              required
+            />
+            <div class="invalid-feedback">Este campo é obrigatório.</div>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="resgate_num">Número:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="resgate_num"
+              name="resgate_num"
+              required
+            />
+            <div class="invalid-feedback">Este campo é obrigatório.</div>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="resgate_bairro">Bairro:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="resgate_bairro"
+              name="resgate_bairro"
+              required
+            />
+            <div class="invalid-feedback">Este campo é obrigatório.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="resgate_cidade">Cidade:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="resgate_cidade"
+              name="resgate_cidade"
+              required
+            />
+            <div class="invalid-feedback">Este campo é obrigatório.</div>
+          </div>
+        </div>
+
+        <!-- Sessão Contato -->
+        <div class="form-group">
+          <label for="resgate_contato1">Número de Celular:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="resgate_contato1"
+            name="resgate_contato1"
+            required
+          />
+          <div class="invalid-feedback">Este campo é obrigatório.</div>
+        </div>
+
+        <!-- Sessão Urgência -->
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="resgate_bebes">Bebês (0 - 5 Anos):</label>
+            <select
+              class="form-control select2"
+              id="resgate_bebes"
+              name="resgate_bebes"
+            >
+              <option value="">Selecione</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="resgate_criancas">Crianças (4 - 12 Anos):</label>
+            <select
+              class="form-control select2"
+              id="resgate_criancas"
+              name="resgate_criancas"
+            >
+              <option value="">Selecione</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="resgate_idosos">Idosos (60+ Anos):</label>
+            <select
+              class="form-control select2"
+              id="resgate_idosos"
+              name="resgate_idosos"
+            >
+              <option value="">Selecione</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sessão Detalhes -->
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="resgate_numPessoas">Número de Pessoas:</label>
+            <select
+              class="form-control select2"
+              id="resgate_numPessoas"
+              name="resgate_numPessoas"
+            >
+              <option value="">Selecione</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="resgate_numAnimais">Número de Animais:</label>
+            <select
+              class="form-control select2"
+              id="resgate_numAnimais"
+              name="resgate_numAnimais"
+            >
+              <option value="">Selecione</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="resgate_detalhes">Informações Extras:</label>
+          <textarea
+            class="form-control"
+            id="resgate_detalhes"
+            name="resgate_detalhes"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitBtn">
+          Enviar
+        </button>
+        <button type="button" class="btn btn-secondary" id="resetBtn">
+          Limpar
+        </button>
+      </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Aplicar máscaras aos campos
+        $("#resgate_contato1").mask("(00) 00000-0000");
+
+        // Inicializar Select2
+        $(".select2").select2({
+          placeholder: "Selecione",
+          allowClear: true,
+        });
+
+        // Alterar a cor de fundo do campo selecionado
+        $("input, textarea, select")
+          .focus(function () {
+            $(this).css("background-color", "#e9f5ff");
+          })
+          .blur(function () {
+            $(this).css("background-color", "");
+          });
+
+        // Adicionar carimbo de data e hora ao enviar o formulário
+        function adicionarCarimboDataHora() {
+          const dataHoraAtual = new Date().toLocaleString("pt-BR", {
+            timeZone: "America/Sao_Paulo",
+          });
+          return $("<input>").attr({
+            type: "hidden",
+            id: "carimboDataHora",
+            name: "carimboDataHora",
+            value: dataHoraAtual,
+          });
+        }
+
+        // Validação do formulário
+        $("#resgateForm").on("submit", function (event) {
+          event.preventDefault();
+          var form = $(this);
+          if (form[0].checkValidity() === false) {
+            event.stopPropagation();
+            form.addClass("was-validated");
+            Swal.fire({
+              icon: "error",
+              title: "Erro",
+              text: "Por favor, preencha todos os campos obrigatórios.",
+            });
+          } else {
+            form.append(adicionarCarimboDataHora());
+            Swal.fire({
+              title: "Confirmação",
+              text: "Deseja realmente enviar  o formulário?",
+              icon: "question",
+              showCancelButton: true,
+              confirmButtonText: "Enviar",
+              cancelButtonText: "Cancelar",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                // Simulação de submissão do formulário
+                console.log(form.serializeArray());
+                Swal.fire(
+                  "Submetido!",
+                  "O formulário foi submetido com sucesso.",
+                  "success"
+                );
+              }
+            });
+          }
+          form.addClass("was-validated");
+        });
+
+        // Limpar formulário
+        $("#resetBtn").on("click", function () {
+          Swal.fire({
+            title: "Confirmação",
+            text: "Deseja realmente limpar o formulário?",
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonText: "Sim, limpar",
+            cancelButtonText: "Cancelar",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              $("#resgateForm")[0].reset();
+              $(".select2").val(null).trigger("change");
+              $("#resgateForm").removeClass("was-validated");
+              Swal.fire("Limpo!", "O formulário foi limpo.", "success");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
